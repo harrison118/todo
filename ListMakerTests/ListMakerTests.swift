@@ -7,11 +7,17 @@
 //
 
 import XCTest
-@testable import ListMaker
 
 class ListMakerTests: XCTestCase {
     
-    override func setUp() {
+    var lister = Lister()
+    func testAddItem() {
+        self.lister.add(item: "bread")
+        let newItem:String = lister.getItem(atIndex: 0)
+        XCTAssertEqual(newItem, "bread")
+    }
+    
+        override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }

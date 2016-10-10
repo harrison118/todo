@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8A6E2C391DABCB44006B3E32 /* ListMaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A6E2C2F1DABCB44006B3E32 /* ListMaker.framework */; };
-		8A6E2C3E1DABCB44006B3E32 /* ListMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E2C3D1DABCB44006B3E32 /* ListMakerTests.swift */; };
 		8A6E2C401DABCB44006B3E32 /* ListMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A6E2C321DABCB44006B3E32 /* ListMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A6E2C4A1DABCBA2006B3E32 /* Lister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E2C491DABCBA2006B3E32 /* Lister.swift */; };
+		8A920D5C1DABE2500037CC3C /* ListMaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A6E2C2F1DABCB44006B3E32 /* ListMaker.framework */; };
+		8A920D621DABE25F0037CC3C /* Lister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E2C491DABCBA2006B3E32 /* Lister.swift */; };
+		8A920D641DABE26C0037CC3C /* ListMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A920D591DABE2500037CC3C /* ListMakerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8A6E2C3A1DABCB44006B3E32 /* PBXContainerItemProxy */ = {
+		8A920D5D1DABE2500037CC3C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8A6E2C261DABCB44006B3E32 /* Project object */;
 			proxyType = 1;
@@ -26,9 +28,10 @@
 		8A6E2C2F1DABCB44006B3E32 /* ListMaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ListMaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A6E2C321DABCB44006B3E32 /* ListMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListMaker.h; sourceTree = "<group>"; };
 		8A6E2C331DABCB44006B3E32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A6E2C381DABCB44006B3E32 /* ListMakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListMakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A6E2C3D1DABCB44006B3E32 /* ListMakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMakerTests.swift; sourceTree = "<group>"; };
-		8A6E2C3F1DABCB44006B3E32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A6E2C491DABCBA2006B3E32 /* Lister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lister.swift; sourceTree = "<group>"; };
+		8A920D571DABE2500037CC3C /* ListMakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListMakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A920D591DABE2500037CC3C /* ListMakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMakerTests.swift; sourceTree = "<group>"; };
+		8A920D5B1DABE2500037CC3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,11 +42,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8A6E2C351DABCB44006B3E32 /* Frameworks */ = {
+		8A920D541DABE2500037CC3C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A6E2C391DABCB44006B3E32 /* ListMaker.framework in Frameworks */,
+				8A920D5C1DABE2500037CC3C /* ListMaker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				8A6E2C311DABCB44006B3E32 /* ListMaker */,
-				8A6E2C3C1DABCB44006B3E32 /* ListMakerTests */,
+				8A920D581DABE2500037CC3C /* ListMakerTests */,
 				8A6E2C301DABCB44006B3E32 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,7 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				8A6E2C2F1DABCB44006B3E32 /* ListMaker.framework */,
-				8A6E2C381DABCB44006B3E32 /* ListMakerTests.xctest */,
+				8A920D571DABE2500037CC3C /* ListMakerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,15 +76,16 @@
 			children = (
 				8A6E2C321DABCB44006B3E32 /* ListMaker.h */,
 				8A6E2C331DABCB44006B3E32 /* Info.plist */,
+				8A6E2C491DABCBA2006B3E32 /* Lister.swift */,
 			);
 			path = ListMaker;
 			sourceTree = "<group>";
 		};
-		8A6E2C3C1DABCB44006B3E32 /* ListMakerTests */ = {
+		8A920D581DABE2500037CC3C /* ListMakerTests */ = {
 			isa = PBXGroup;
 			children = (
-				8A6E2C3D1DABCB44006B3E32 /* ListMakerTests.swift */,
-				8A6E2C3F1DABCB44006B3E32 /* Info.plist */,
+				8A920D591DABE2500037CC3C /* ListMakerTests.swift */,
+				8A920D5B1DABE2500037CC3C /* Info.plist */,
 			);
 			path = ListMakerTests;
 			sourceTree = "<group>";
@@ -118,22 +122,22 @@
 			productReference = 8A6E2C2F1DABCB44006B3E32 /* ListMaker.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8A6E2C371DABCB44006B3E32 /* ListMakerTests */ = {
+		8A920D561DABE2500037CC3C /* ListMakerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8A6E2C461DABCB44006B3E32 /* Build configuration list for PBXNativeTarget "ListMakerTests" */;
+			buildConfigurationList = 8A920D5F1DABE2500037CC3C /* Build configuration list for PBXNativeTarget "ListMakerTests" */;
 			buildPhases = (
-				8A6E2C341DABCB44006B3E32 /* Sources */,
-				8A6E2C351DABCB44006B3E32 /* Frameworks */,
-				8A6E2C361DABCB44006B3E32 /* Resources */,
+				8A920D531DABE2500037CC3C /* Sources */,
+				8A920D541DABE2500037CC3C /* Frameworks */,
+				8A920D551DABE2500037CC3C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8A6E2C3B1DABCB44006B3E32 /* PBXTargetDependency */,
+				8A920D5E1DABE2500037CC3C /* PBXTargetDependency */,
 			);
 			name = ListMakerTests;
 			productName = ListMakerTests;
-			productReference = 8A6E2C381DABCB44006B3E32 /* ListMakerTests.xctest */;
+			productReference = 8A920D571DABE2500037CC3C /* ListMakerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -148,9 +152,10 @@
 				TargetAttributes = {
 					8A6E2C2E1DABCB44006B3E32 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
-					8A6E2C371DABCB44006B3E32 = {
+					8A920D561DABE2500037CC3C = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
 					};
@@ -169,7 +174,7 @@
 			projectRoot = "";
 			targets = (
 				8A6E2C2E1DABCB44006B3E32 /* ListMaker */,
-				8A6E2C371DABCB44006B3E32 /* ListMakerTests */,
+				8A920D561DABE2500037CC3C /* ListMakerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -182,7 +187,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8A6E2C361DABCB44006B3E32 /* Resources */ = {
+		8A920D551DABE2500037CC3C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -196,24 +201,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A6E2C4A1DABCBA2006B3E32 /* Lister.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8A6E2C341DABCB44006B3E32 /* Sources */ = {
+		8A920D531DABE2500037CC3C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A6E2C3E1DABCB44006B3E32 /* ListMakerTests.swift in Sources */,
+				8A920D641DABE26C0037CC3C /* ListMakerTests.swift in Sources */,
+				8A920D621DABE25F0037CC3C /* Lister.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8A6E2C3B1DABCB44006B3E32 /* PBXTargetDependency */ = {
+		8A920D5E1DABE2500037CC3C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8A6E2C2E1DABCB44006B3E32 /* ListMaker */;
-			targetProxy = 8A6E2C3A1DABCB44006B3E32 /* PBXContainerItemProxy */;
+			targetProxy = 8A920D5D1DABE2500037CC3C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -320,6 +327,7 @@
 		8A6E2C441DABCB44006B3E32 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -331,6 +339,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Harrison.ListMaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -338,6 +347,7 @@
 		8A6E2C451DABCB44006B3E32 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -353,7 +363,7 @@
 			};
 			name = Release;
 		};
-		8A6E2C471DABCB44006B3E32 /* Debug */ = {
+		8A920D601DABE2500037CC3C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = ListMakerTests/Info.plist;
@@ -364,7 +374,7 @@
 			};
 			name = Debug;
 		};
-		8A6E2C481DABCB44006B3E32 /* Release */ = {
+		8A920D611DABE2500037CC3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = ListMakerTests/Info.plist;
@@ -394,12 +404,13 @@
 				8A6E2C451DABCB44006B3E32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		8A6E2C461DABCB44006B3E32 /* Build configuration list for PBXNativeTarget "ListMakerTests" */ = {
+		8A920D5F1DABE2500037CC3C /* Build configuration list for PBXNativeTarget "ListMakerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8A6E2C471DABCB44006B3E32 /* Debug */,
-				8A6E2C481DABCB44006B3E32 /* Release */,
+				8A920D601DABE2500037CC3C /* Debug */,
+				8A920D611DABE2500037CC3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
