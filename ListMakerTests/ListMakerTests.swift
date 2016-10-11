@@ -17,6 +17,15 @@ class ListMakerTests: XCTestCase {
         XCTAssertEqual(newItem, "bread")
     }
     
+    func testGetInvalidIndex() {
+        self.lister.add(item:"bread")
+        self.lister.add(item: "butter")
+        print(self.lister.count)
+        XCTAssertEqual(lister.count, 2)
+        XCTAssertEqual(lister.getItem(atIndex: 2),"butter")
+    }
+    
+    
         override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
