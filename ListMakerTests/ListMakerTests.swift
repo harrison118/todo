@@ -10,42 +10,40 @@ import XCTest
 
 class ListMakerTests: XCTestCase {
     
-    var lister = Lister()
-    func testAddItem() {
-        self.lister.add(item: "bread")
-        let newItem:String = lister.getItem(atIndex: 0)
-        XCTAssertEqual(newItem, "bread")
-    }
-    
-    func testGetInvalidIndex() {
+    override func setUp() {
+        super.setUp()
         self.lister.add(item:"bread")
         self.lister.add(item: "butter")
-        print(self.lister.count)
-        XCTAssertEqual(lister.count, 2)
-        XCTAssertEqual(lister.getItem(atIndex: 2),"butter")
-    }
-    
-    
-        override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    var lister = Lister()
+    func testAddItem() {
+        XCTAssertEqual(self.lister.count, 2)
+        self.lister.add(item: "ham")
+        XCTAssertEqual(self.lister.count, 3)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testGetInvalidIndex() {
+        print(self.lister.count)
+        XCTAssertEqual(self.lister.count, 2)
+        do {
+            _ = try lister.getItem(atIndex: 2)
+            XCTFail()
+        } catch ListError.outOfRange(let index){
+            print("index\(index) is out of range")
+            XCTAssertEqual(index, 2)
+        }catch {
+            XCTFail()
         }
     }
+
+    
+
+    
     
 }
