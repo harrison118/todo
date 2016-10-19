@@ -26,13 +26,14 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8A6E2C371DABCB44006B3E32"
+               BlueprintIdentifier = "8A920D561DABE2500037CC3C"
                BuildableName = "ListMakerTests.xctest"
                BlueprintName = "ListMakerTests"
                ReferencedContainer = "container:ListMaker.xcodeproj">
