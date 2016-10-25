@@ -19,10 +19,10 @@
             </objects>
             <point key="canvasLocation" x="-2113" y="-77"/>
         </scene>
-        <!--View Controller-->
+        <!--Note Controller-->
         <scene sceneID="SFt-rE-cn2">
             <objects>
-                <viewController id="FNi-KU-lzE" sceneMemberID="viewController">
+                <viewController id="FNi-KU-lzE" customClass="NoteController" customModule="Note_It" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jHD-fl-wWj"/>
                         <viewControllerLayoutGuide type="bottom" id="t08-bG-fH0"/>
@@ -30,6 +30,15 @@
                     <view key="view" contentMode="scaleToFill" id="mgd-Dj-IaG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mtu-Ho-LmM">
+                                <frame key="frameInset" minY="64" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Note" id="kQ3-RK-330"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="jxJ-N4-xMV"/>
@@ -57,7 +66,7 @@
         <!--Root View Controller-->
         <scene sceneID="2tp-Qi-72d">
             <objects>
-                <tableViewController id="kuL-Hq-vPL" sceneMemberID="viewController">
+                <tableViewController id="kuL-Hq-vPL" customClass="ListController" customModule="Note_It" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bLG-Sg-Wnm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,6 +78,15 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9bB-3b-TN8" id="x6G-i3-AiM">
                                     <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YgF-S4-eIl">
+                                            <frame key="frameInset" minX="8" minY="-9" height="44" maxX="-8"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            <items>
+                                                <navigationItem title="Note It" id="KyR-ka-gNL"/>
+                                            </items>
+                                        </navigationBar>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
