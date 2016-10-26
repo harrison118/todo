@@ -27,12 +27,7 @@ class Notes {
     
     public static let sharedInstance = Notes()
     
-    
     var notes:[Note]
-    
-   
-    
-    
     
     init() {
         self.notes = []
@@ -40,42 +35,65 @@ class Notes {
 
     public func add(note:Note) throws {
         
+       self.notes.append(note)
+        
     }
     
-    public func getNote(atIndex index: Int ) throws -> Note {
-        return Note(title:"Hello", text : "World")
+    public func getNote(atIndex: Int ) throws -> Note {
+        if (atIndex < 0) || (atIndex > (self.notes.count -  1)){
+            throw NoteError.outOfRange(Index : atIndex)
+        }
+        return self.notes[atIndex]
     }
 
-    public var count : Int {
-        
-        get {
-            return 0
-        }
-    }
+   
     
     public func clearList() {
         
-        
-    }
-    
-    public func insert(note : Note, at index : Int ) throws {
+        self.notes.removeAll()
         
         
     }
     
-    public func update(note : Note, at index : Int ) throws {
+    public func insert(note : Note, atIndex : Int ) throws {
+        if (atIndex < 0) || ( atIndex > (self.notes.count)){
+            throw NoteError.outOfRange(Index : atIndex)
+        }else {
+            
+            self.notes.insert(note , at: atIndex)
+        }
+        
+    }
+    
+    public func update(note : Note, atIndex : Int ) throws {
+        if (atIndex < 0) || ( atIndex > (self.notes.count -  1)){
+            throw NoteError.outOfRange(Index : atIndex)
+        }else {
+        self.notes[atIndex] = note
+        
+    }
+    }
+    
+    public func remove(atIndex: Int ) throws {
+        
+        if (atIndex < 0) || (atIndex > (self.notes.count -  1)){
+            throw NoteError.outOfRange(Index : atIndex)
+        }
+        else {
+            self.notes.remove(at:atIndex)
+        }
         
         
     }
     
-    public func remove(at index: Int ) throws {
+    
+    
+    public var count : Int {
         
-        
+        get {
+            return self.notes.count
+        }
     }
-    
-    
-    
-    
 
 
 
