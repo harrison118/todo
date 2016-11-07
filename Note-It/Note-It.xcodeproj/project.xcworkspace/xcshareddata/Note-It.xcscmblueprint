@@ -1,14 +1,18 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "480A7695E181724DBA4941ACADF3251949E04E34",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "480A7695E181724DBA4941ACADF3251949E04E34+++687C460",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "480A7695E181724DBA4941ACADF3251949E04E34" : 9223372036854775807
+    "480A7695E181724DBA4941ACADF3251949E04E34+++DC40101" : 9223372036854775807,
+    "480A7695E181724DBA4941ACADF3251949E04E34+++687C460" : 9223372036854775807,
+    "480A7695E181724DBA4941ACADF3251949E04E34+++DBDE4C5" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "EA74F33A-B2DD-415E-A9EE-E76E31B0A81B",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "480A7695E181724DBA4941ACADF3251949E04E34" : ""
+    "480A7695E181724DBA4941ACADF3251949E04E34+++DC40101" : "",
+    "480A7695E181724DBA4941ACADF3251949E04E34+++687C460" : "todo\/",
+    "480A7695E181724DBA4941ACADF3251949E04E34+++DBDE4C5" : ""
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Note-It",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -17,12 +21,17 @@
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/harrison118\/todo.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "480A7695E181724DBA4941ACADF3251949E04E34"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "480A7695E181724DBA4941ACADF3251949E04E34+++687C460"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/harrison118\/todo.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "480A7695E181724DBA4941ACADF3251949E04E34"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "480A7695E181724DBA4941ACADF3251949E04E34+++DBDE4C5"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/harrison118\/todo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "480A7695E181724DBA4941ACADF3251949E04E34+++DC40101"
     }
   ]
 }
