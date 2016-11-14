@@ -13,6 +13,10 @@ class NoteController: UIViewController, UITextViewDelegate, UITextFieldDelegate 
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var noteField: UITextView!
     @IBOutlet weak var doneButton: UIBarButtonItem!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+
+    
+    
     
     @IBAction func dismissKeyboard(_ sender : UIBarButtonItem ){
         self.textField.resignFirstResponder()
@@ -23,8 +27,12 @@ class NoteController: UIViewController, UITextViewDelegate, UITextFieldDelegate 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.doneButton.tintColor = UIColor.clear
         self.textField.delegate = self
         self.noteField.delegate = self
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: .UIKeyboardWillHide, object: nil)
+        
         if let id:Int = self.noteID {
             print("View did load \(id)")
             if let note:Note = try? Notes.sharedInstance.getNote(atIndex: id) {
@@ -46,14 +54,24 @@ class NoteController: UIViewController, UITextViewDelegate, UITextFieldDelegate 
         print("Finished Editing the Note")
     }
     
-    func keyboardWillshow(_ notification : NSNotification){
+    func keyboardWillShow(_ notification : NSNotification){
         print("Keyboard will Show")
         self.doneButton.tintColor = nil
+        if let info = notification.userInfo {
+            if let keyboardInfo = info[UIKeyboardFrameBeginUserInfoKey] as! NSValue? {
+                let height:CGFloat = keyboardInfo.cgRectValue.height
+                print("height is \(height)")
+                print("bottom \(self.bottomConstraint.constant)")
+                self.bottomConstraint.constant = height + 8
+            }
+        }
+        
     }
     
-    func KeyboardWillHide(_ notification = NSNotification) {
+    func keyboardWillHide(_ notification : NSNotification) {
         print("keyboard will Hide ")
-        self.doneButton.tintColor = UIcolor.clear
+        self.doneButton.tintColor = UIColor.clear
+        self.bottomConstraint.constant = 8
 
     }
 
